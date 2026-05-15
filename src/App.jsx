@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   Truck,
@@ -12,10 +11,6 @@ import {
   BarChart3,
   Boxes,
 } from 'lucide-react';
-=======
-
-import React, { useEffect, useMemo, useState } from 'react';
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
 
 export default function ConcretoDiarioApp() {
   const [estacaInicial, setEstacaInicial] = useState('');
@@ -24,10 +19,6 @@ export default function ConcretoDiarioApp() {
   const [comprimento, setComprimento] = useState('');
   const [largura, setLargura] = useState('');
   const [espessura, setEspessura] = useState('');
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
   const [lancamentos, setLancamentos] = useState(() => {
     const dadosSalvos = localStorage.getItem('concreto-diario');
     return dadosSalvos ? JSON.parse(dadosSalvos) : [];
@@ -66,10 +57,6 @@ export default function ConcretoDiarioApp() {
     };
 
     setLancamentos([novo, ...lancamentos]);
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
     setEstacaInicial('');
     setEstacaFinal('');
     setQuantidadeCaminhao('');
@@ -86,7 +73,6 @@ export default function ConcretoDiarioApp() {
   }
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,_#164e63,_#020617_45%)] text-white p-4 md:p-6 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -115,34 +101,12 @@ export default function ConcretoDiarioApp() {
             </div>
 
             <h2 className="relative text-7xl md:text-8xl font-black mt-5 text-cyan-400 tracking-tight drop-shadow-[0_0_25px_rgba(34,211,238,0.5)]">
-=======
-    <div className="min-h-screen bg-[#0f172a] text-white p-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-10 text-center">
-          <h1 className="text-5xl font-black">
-            🚧 Concreto Diário
-          </h1>
-
-          <p className="text-slate-400 text-xl mt-3">
-            Controle simples de concretagem
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-slate-800 rounded-3xl p-8 shadow-2xl">
-            <p className="text-slate-400 text-lg">
-              Volume Atual
-            </p>
-
-            <h2 className="text-7xl font-black mt-5 text-blue-400">
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
               {volumeAtual}
             </h2>
 
             <p className="text-3xl mt-2">m³</p>
           </div>
 
-<<<<<<< HEAD
           <div className="bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-700 rounded-[36px] p-8 text-black shadow-[0_0_100px_rgba(16,185,129,0.45)] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-52 h-52 bg-white/10 blur-3xl rounded-full"></div>
 
@@ -154,14 +118,6 @@ export default function ConcretoDiarioApp() {
             </div>
 
             <h2 className="relative text-7xl md:text-8xl font-black mt-5 tracking-tight drop-shadow-[0_0_25px_rgba(255,255,255,0.25)]">
-=======
-          <div className="bg-emerald-500 rounded-3xl p-8 text-black shadow-2xl">
-            <p className="text-lg font-bold">
-              Total do Dia
-            </p>
-
-            <h2 className="text-7xl font-black mt-5">
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
               {totalDia}
             </h2>
 
@@ -169,7 +125,6 @@ export default function ConcretoDiarioApp() {
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="bg-gradient-to-br from-slate-950/90 via-slate-900/90 to-cyan-950/40 via-slate-900/90 to-cyan-950/40 backdrop-blur-2xl border border-cyan-400/10 rounded-[42px] p-8 md:p-10 shadow-[0_0_120px_rgba(8,145,178,0.18)] relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.12),transparent_35%)]"></div>
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-cyan-400/10 blur-3xl rounded-full"></div>
@@ -208,77 +163,43 @@ export default function ConcretoDiarioApp() {
               onChange={(e) => setEstacaInicial(e.target.value)}
               placeholder="📍 Estaca Inicial"
               className="bg-black/40 backdrop-blur-xl rounded-[24px] px-6 py-5 text-lg outline-none border border-white/10 focus:border-cyan-400 transition-all focus:shadow-[0_0_30px_rgba(34,211,238,0.25)] focus:-translate-y-1 placeholder:text-slate-500 shadow-[0_0_30px_rgba(15,23,42,0.5)]"
-=======
-        <div className="bg-slate-800 rounded-3xl p-8 shadow-2xl">
-          <h2 className="text-3xl font-black mb-8">
-            Novo Lançamento
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-5">
-            <input
-              value={estacaInicial}
-              onChange={(e) => setEstacaInicial(e.target.value)}
-              placeholder="Estaca Inicial"
-              className="bg-slate-900 rounded-2xl p-5 text-lg outline-none border border-slate-700"
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             />
 
             <input
               value={estacaFinal}
               onChange={(e) => setEstacaFinal(e.target.value)}
-<<<<<<< HEAD
               placeholder="🚩 Estaca Final"
               className="bg-black/30 backdrop-blur-xl rounded-2xl p-5 text-lg outline-none border border-white/10 focus:border-cyan-400 transition-all focus:scale-[1.01]"
-=======
-              placeholder="Estaca Final"
-              className="bg-slate-900 rounded-2xl p-5 text-lg outline-none border border-slate-700"
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             />
 
             <input
               type="number"
               value={quantidadeCaminhao}
               onChange={(e) => setQuantidadeCaminhao(e.target.value)}
-<<<<<<< HEAD
               placeholder="🚚 Quantidade de Caminhão"
               className="bg-black/40 backdrop-blur-xl rounded-[24px] px-6 py-5 text-lg outline-none border border-white/10 focus:border-cyan-400 transition-all focus:shadow-[0_0_30px_rgba(34,211,238,0.25)] focus:-translate-y-1 placeholder:text-slate-500 shadow-[0_0_30px_rgba(15,23,42,0.5)]"
-=======
-              placeholder="Quantidade de Caminhão"
-              className="bg-slate-900 rounded-2xl p-5 text-lg outline-none border border-slate-700"
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             />
 
             <input
               type="number"
               value={comprimento}
               onChange={(e) => setComprimento(e.target.value)}
-<<<<<<< HEAD
               placeholder="📏 Comprimento"
               className="bg-black/40 backdrop-blur-xl rounded-[24px] px-6 py-5 text-lg outline-none border border-white/10 focus:border-cyan-400 transition-all focus:shadow-[0_0_30px_rgba(34,211,238,0.25)] focus:-translate-y-1 placeholder:text-slate-500 shadow-[0_0_30px_rgba(15,23,42,0.5)]"
-=======
-              placeholder="Comprimento"
-              className="bg-slate-900 rounded-2xl p-5 text-lg outline-none border border-slate-700"
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             />
 
             <input
               type="number"
               value={largura}
               onChange={(e) => setLargura(e.target.value)}
-<<<<<<< HEAD
               placeholder="📐 Largura"
               className="bg-black/40 backdrop-blur-xl rounded-[24px] px-6 py-5 text-lg outline-none border border-white/10 focus:border-cyan-400 transition-all focus:shadow-[0_0_30px_rgba(34,211,238,0.25)] focus:-translate-y-1 placeholder:text-slate-500 shadow-[0_0_30px_rgba(15,23,42,0.5)]"
-=======
-              placeholder="Largura"
-              className="bg-slate-900 rounded-2xl p-5 text-lg outline-none border border-slate-700"
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             />
 
             <input
               type="number"
               value={espessura}
               onChange={(e) => setEspessura(e.target.value)}
-<<<<<<< HEAD
               placeholder="📚 Espessura"
               className="bg-black/40 backdrop-blur-xl rounded-[24px] px-6 py-5 text-lg outline-none border border-white/10 focus:border-cyan-400 transition-all focus:shadow-[0_0_30px_rgba(34,211,238,0.25)] focus:-translate-y-1 placeholder:text-slate-500 shadow-[0_0_30px_rgba(15,23,42,0.5)]"
             />
@@ -290,37 +211,17 @@ export default function ConcretoDiarioApp() {
               className="flex-1 bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-600 hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 py-6 rounded-[26px] text-2xl font-black shadow-[0_0_60px_rgba(34,211,238,0.45)] border border-cyan-300/20 tracking-wide"
             >
               ➕ Adicionar Concretagem
-=======
-              placeholder="Espessura"
-              className="bg-slate-900 rounded-2xl p-5 text-lg outline-none border border-slate-700"
-            />
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-4 mt-8">
-            <button
-              onClick={adicionarLancamento}
-              className="flex-1 bg-blue-600 hover:bg-blue-500 transition py-5 rounded-2xl text-2xl font-black"
-            >
-              Adicionar
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             </button>
 
             <button
               onClick={limparDia}
-<<<<<<< HEAD
               className="flex-1 bg-gradient-to-r from-red-500 via-red-600 to-orange-500 hover:scale-[1.03] hover:-translate-y-1 transition-all duration-300 py-6 rounded-[26px] text-2xl font-black shadow-[0_0_60px_rgba(239,68,68,0.35)] border border-red-300/10 tracking-wide"
             >
               🗑️ Limpar Relatório
-=======
-              className="flex-1 bg-red-500 hover:bg-red-400 transition py-5 rounded-2xl text-2xl font-black"
-            >
-              Limpar Dia
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[40px] p-8 shadow-[0_0_80px_rgba(15,23,42,0.9)] mt-8 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400"></div>
           <div className="flex items-center gap-4 mb-8">
@@ -330,29 +231,15 @@ export default function ConcretoDiarioApp() {
             </h2>
           </div>     
           
-=======
-        <div className="bg-slate-800 rounded-3xl p-8 shadow-2xl mt-8">
-          <h2 className="text-3xl font-black mb-8">
-            Histórico do Dia
-          </h2>
-
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
           <div className="space-y-4">
             {lancamentos.map((item) => (
               <div
                 key={item.id}
-<<<<<<< HEAD
                 className="bg-black/30 backdrop-blur-xl border border-white/10 rounded-[28px] p-6 flex items-center justify-between hover:border-cyan-400/40 hover:scale-[1.01] transition-all duration-300 shadow-[0_0_30px_rgba(34,211,238,0.06)]"
               >
                 <div>
                   <h3 className="text-2xl font-bold flex items-center gap-3">
                     <Truck className="text-cyan-400" />
-=======
-                className="bg-slate-900 border border-slate-700 rounded-2xl p-5 flex items-center justify-between"
-              >
-                <div>
-                  <h3 className="text-2xl font-bold">
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
                     Concretagem
                   </h3>
 
@@ -366,11 +253,7 @@ export default function ConcretoDiarioApp() {
                 </div>
 
                 <div>
-<<<<<<< HEAD
                   <h4 className="text-4xl font-black text-cyan-400 tracking-tight">
-=======
-                  <h4 className="text-3xl font-black text-blue-400">
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
                     {item.volume} m³
                   </h4>
                 </div>
@@ -378,18 +261,12 @@ export default function ConcretoDiarioApp() {
             ))}
 
             {lancamentos.length === 0 && (
-<<<<<<< HEAD
               <div className="bg-black/20 backdrop-blur-xl border border-white/10 rounded-[30px] p-10 text-center text-slate-400 text-2xl">
                 Nenhum lançamento registrado hoje 🚧
-=======
-              <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8 text-center text-slate-400 text-xl">
-                Nenhum lançamento hoje.
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
               </div>
             )}
           </div>
         </div>
-<<<<<<< HEAD
 
         <div className="mt-10 text-center">
           <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-cyan-400/10 px-6 py-4 rounded-2xl shadow-[0_0_30px_rgba(34,211,238,0.08)]">
@@ -400,8 +277,6 @@ export default function ConcretoDiarioApp() {
             </p>
           </div>
         </div>
-=======
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
       </div>
     </div>
   );
