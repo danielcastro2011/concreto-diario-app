@@ -1,23 +1,21 @@
 {
   "name": "concreto-diario-app",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "lucide-react": "^1.16.0",
-=======
->>>>>>> 8e073db3ab0a39ea0fd79090c3ffae820608ba42
+    "lucide-react": "^0.511.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-pwa": "^0.20.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
-    "vite": "^5.0.0",
-    "vite-plugin-pwa": "^0.20.5"
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.0"
   }
 }
